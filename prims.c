@@ -1,5 +1,5 @@
 /*  Implementation of Prim's algorithm using adjacency list
-    this code is unnecessarily hige due to the implementation of 
+    this code is unnecessarily huge due to the implementations of 
     linked list, priority queue, hashtales and graph data structures.
     
     Not for faint-hearteds, for the code is dark and full of POINTERS!
