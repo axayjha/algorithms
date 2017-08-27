@@ -1,3 +1,4 @@
+/*Hash table with int as key and value both*/
 #include <iostream>
 #include <cstdlib>
 
