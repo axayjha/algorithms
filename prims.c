@@ -1,4 +1,9 @@
-/*Hash table with string as key and int as value*/
+/*  Implementation of Prim's algorithm using adjacency list
+    this code is unnecessarily hige due to the implementation of 
+    linked list, priority queue, hashtales and graph data structures.
+    
+    Not for faint-hearteds, for the code is dark and full of POINTERS!
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
