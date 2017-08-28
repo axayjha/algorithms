@@ -1,6 +1,6 @@
 /*  Implementation of Prim's algorithm using adjacency list
     this code is unnecessarily huge due to the implementations of 
-    linked list, priority queue, hashtales and graph data structures.
+    linked list, priority queue, hashtable and graph data structures.
     
     Not for faint-hearteds, for the code is dark and full of POINTERS!
 */
