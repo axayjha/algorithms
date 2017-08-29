@@ -145,6 +145,7 @@ int main()
             }
             head=head->next;
         }    
+        strcpy(u->name, "black");
         head=temp;
     }   
     
