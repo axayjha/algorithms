@@ -1,3 +1,11 @@
+/*
+    Radix Sort implementation
+    
+    Akshay Anand
+    5th Sem
+    02/09/2017
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
