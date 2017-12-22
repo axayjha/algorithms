@@ -8,7 +8,7 @@
 
 uint8_t lookup[256] = { COUNT_BITS };  /* lookup table */
 
-uint8_t _numOfSetBits(uint32_t n)  /* takes linear time */
+uint8_t _numOfSetBits(int n)  /* takes linear time */
 {
 	uint8_t count = 0;
 	while(n!=0)
@@ -16,7 +16,7 @@ uint8_t _numOfSetBits(uint32_t n)  /* takes linear time */
 	return count;
 }
 
-uint8_t numOfSetBits(uint32_t n) 	/* takes constant time */
+uint8_t numOfSetBits(int n) 	/* takes constant time */
 {
 	uint8_t count = lookup[n & 0xff] +
 					lookup[(n>>8) & 0xff] +
