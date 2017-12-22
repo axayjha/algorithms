@@ -15,8 +15,8 @@ enum { ASCENDING = 0xbabe, DESCENDING = 0xface };
 typedef uint64_t sorting;
 
 template <typename whatever> void sort(whatever *, size_t ,
-										 bool (*cmp)(whatever, whatever, sorting),
-										 sorting order = ASCENDING);
+					bool (*cmp)(whatever, whatever, sorting),
+					sorting order = ASCENDING);
 
 template <typename whatever> void swap(whatever *, whatever *);
 template <typename whatever> bool cmp(whatever , whatever , sorting);
