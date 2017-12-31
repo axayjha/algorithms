@@ -10,14 +10,14 @@ void selectionsort(int *array, size_t n);
 int  min(int *array, int start, int end);
 void swap(int *array, int i, int j);
 
-int main()
+int main(int argc, char *argv[])
 {
 	int arr[] = {6, 2, 7, 8, 9, 1};
 	selectionsort(arr, SIZE(arr));
 	for(int i = 0, n = SIZE(arr); i < n; i++)
 		printf("%d ", arr[i]);
 	printf("\n");
-
+	return 0;
 }
 
 /* min: returns the index of min of the subarray array[start .... end] */
