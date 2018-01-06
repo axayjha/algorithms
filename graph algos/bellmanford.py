@@ -50,9 +50,9 @@ def relax(G, a, b):
     """
         relaxes edge in favour of choosing shorter path
     """
-    if G.vertices[a][0] > G.vertices[b][0] + G.adjList[a][b]:
-        G.vertices[a][0] = G.vertices[b][0] + G.adjList[a][b]
-        G.vertices[a][1] = b
+    if G.vertices[b][0] > G.vertices[a][0] + G.adjList[a][b]:
+        G.vertices[b][0] = G.vertices[a][0] + G.adjList[a][b]
+        G.vertices[b][1] = a
     
             
 def bellmanford(G, s):
@@ -62,21 +62,23 @@ def bellmanford(G, s):
     """
     G.vertices[s][0] = 0
     for _ in range(len(G.vertices)-1): ## O(VE), three loops may make it look otherwise
-        for i in G.vertices:
+        for i in G.adjList:
             for j in G.adjList[i]:
                 relax(G, i, j)
-    for i in G.vertices:
+    for i in G.adjList:       
         for j in G.adjList[i]:
-            if G.vertices[i][0] > G.vertices[j][0] + G.adjList[i][j]:
+            if G.vertices[i][0] > G.vertices[j][0] + G.adjList[i][j]:                
                 return False    # if -ve egde cycle exits
+    print("Source = "+str(s))
+    G.show()
     return True    
         
 # a ---4--c
 # | \      \1
 # |  \      \
-# 4   5       e
+# 4   7       e
 # |    \      /
-# |      \   /3
+# |      \   /1
 # b---2----d
 
 G = Graph()
@@ -99,7 +101,6 @@ for i in range(m):
     
 s = input("Enter source vertex: ")
 
-bellmanford(G, s)
-print("Source = "+str(s))
-G.show()
+negative_cycle = bellmanford(G, s)
+print("Negative weight cycle: " + str(not negative_cycle))
             
