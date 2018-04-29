@@ -1,3 +1,10 @@
+/*
+	Markov chain random text generation algo
+	
+	Source
+	The practice of programming by Brian Kernighan
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

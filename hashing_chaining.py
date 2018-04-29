@@ -2,6 +2,7 @@
 ##
 ## Akshay
 ## 15/07/2017
+##
 
 class Node(object):
     """Linked list node"""
@@ -34,8 +35,7 @@ class Node(object):
 class List(object):
     """Linked list class"""
     def __init__(self):
-        # CONSTRUCTOR       
-        # No params
+        # CONSTRUCTOR   
         self.head = None
 
     def push(self, data):
