@@ -9,6 +9,9 @@ using namespace std;
 
 #define N 9999
 
+
+// -------------------IGNORE THIS GARBAGE-------------
+
 struct InvalidBooleanException : public exception {
    const char * what () const throw () {
       return "Invalid Boolean Exception";
@@ -33,6 +36,8 @@ istream &boolyn(istream &stream)
 
 	return stream;
 }
+
+//----------------------------------------------------
 
 
 bool BellmanFord(vector<vector<int>> &adjMat, int v, int s)
