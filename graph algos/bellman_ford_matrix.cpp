@@ -65,7 +65,7 @@ int main(int argc, char const *argv[])
 	std::map<char, int> vert_map;
 	std::map<int, char> vert;
 
-	cout << "Is the graph directed? : ";
+	cout << "Is the graph directed? (y/n): ";
 	cin >> boolyn >> isDirected;
 
 	cout << "Enter the name of the vertices: ";
