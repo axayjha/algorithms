@@ -48,11 +48,11 @@ bool BellmanFord(vector<vector<int>> &adjMat, int v, int s)
 				if (adjMat[s][j] > adjMat[s][k] + adjMat[k][j])
 					adjMat[s][j] = adjMat[s][k] + adjMat[k][j];
 	for (int j = 0; j < v; j++)
-			for (int k = 0; k < v; k++)
-				if (adjMat[s][j] > adjMat[s][k] + adjMat[k][j]) {
-					cout << "\n\n!! Negative weight cycle exits !!\n";
-					return false;
-				}
+		for (int k = 0; k < v; k++)
+			if (adjMat[s][j] > adjMat[s][k] + adjMat[k][j]) {
+				cout << "\n\n!! Negative weight cycle exits !!\n";
+				return false;
+			}
 	return true;			
 }
 
