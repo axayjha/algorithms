@@ -45,6 +45,5 @@ int main(int argc, char const *argv[])
 {
 	//std::vector<int> v = {1, 5, 8, 9, 10, 17, 17, 20, 24, 30};
 	std::vector<int> v = {1, 5, 8, 9, 10, 17, 17, 20};
-	cout << "Max profit: $" << cut_rod(v, 4) << endl;
 	cout << "Max profit: $" << memoized_cut_rod(v, (int)8) << endl;
 }
