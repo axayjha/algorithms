@@ -16,15 +16,15 @@ int rabin_karp_matcher(char T[], char P[], int d, int q)
 		p = (d*p + P[i])%q;
 		t = (d*t + T[i])%q;
 	}
-	printf("%d %d\n", p, t);
-	for(s=-1; s < n-m; s++){
-		printf("%d %d\n", p, t);
+	//printf("%d %d\n", p, t);
+	for(s=0; s <= n-m; s++){
+		//printf("%d %d\n", p, t);
 		if(p == t){
 			for(int i=0; i<m; i++){
-				printf("%c %c\n", P[i], T[s+i+1] );
-				if(P[i] == T[s+i+1]){
+				printf("%c %c\n", P[i], T[s+i] );
+				if(P[i] == T[s+i]){
 					if(i==(m-1)){
-						return s+1;
+						return s;
 					}
 				}
 				else break;	
@@ -33,6 +33,7 @@ int rabin_karp_matcher(char T[], char P[], int d, int q)
 		}
 		if( s < n-m ){
 			t = (d*(t - T[s]*h) + T[s+m])%q;
+			if (t<0) t+=q;
 		}
 		
 	}
@@ -49,5 +50,4 @@ int main()
 	printf("%d\n", rabin_karp_matcher(T, P, D, Q));
 
 }
-
 
