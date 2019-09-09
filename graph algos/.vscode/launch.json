@@ -1,0 +1,10 @@
+{
+        "configurations": [
+                {
+                        "type": "java",
+                        "name": "CodeLens (Launch) - GraphColoring",
+                        "request": "launch",
+                        "mainClass": "GraphColoring"
+                }
+        ]
+}
