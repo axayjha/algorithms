@@ -218,6 +218,9 @@ void insertCase3(Node* n) {
 }
 
 void insertCase4(Node* n) {
+    // if parent's sibling is either missing or BLACK
+    // need restructuring
+    
     Node* p = getParent(n);
     Node* g = getGrandparent(n);
 
